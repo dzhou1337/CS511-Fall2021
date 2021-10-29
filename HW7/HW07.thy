@@ -54,7 +54,7 @@ lemma C1 : "(\<exists>x. P x) \<longrightarrow> S \<Longrightarrow> \<forall>x. 
 
 (* lemma D1 is the same in Exercise 2.3.9 (d), page 161, in [LCS] *)
 lemma D1 : " (\<forall>x. P x) \<longrightarrow> S \<Longrightarrow> \<exists>x. (P x \<longrightarrow> S)"
-  apply (
+  by blast
  
 
 end
