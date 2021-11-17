@@ -25,12 +25,7 @@ lemma E1 : "\<forall> x. (P x \<or> Q x) \<Longrightarrow> (\<forall> x. P x) \<
 lemma F1 : "\<forall> x. \<exists> y. (P x \<or> Q y) \<Longrightarrow> \<exists> y. \<forall> x. (P x \<or> Q y)" 
   apply (rule exCI, rule allI)
   apply (erule_tac x="x" in allE)
-  apply (rotate_tac 1, erule exE)
-  apply (erule_tac x="y" in allE)
-  apply (erule disjE, rule disjI1, assumption)
-  apply (rule disjI2, erule notE, rule allI)
-  apply (rule disjI2, assumption)
-  done
+  apply (rotate_tac 1
 
 (* lemma G1 is the same in Exercise 2.3.9 (g), page 161, in [LCS] *)
 lemma G1 : "\<forall> x. (\<not> P x \<and> Q x) \<Longrightarrow> (\<forall> x. P x \<longrightarrow> Q x)" 
